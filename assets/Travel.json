@@ -283,7 +283,7 @@
     {
       "name": "Karnak Temple Tour",
       "description": "Discover the rich history of Karnak Temple in Luxor.",
-      "image": "assets/images/tour_packages/f.jpg",
+      "image": "assets/images/tour_packages/a.jpg",
       "address": "Luxor, Egypt",
       "rating": "4.7",
       "working_hours": "8:00 AM - 4:00 PM",
@@ -292,7 +292,7 @@
     {
       "name": "Nile River Cruise",
       "description": "Enjoy a special cruise on the Nile River.",
-      "image": "assets/images/tour_packages/e.jpg",
+      "image": "assets/images/tour_packages/a.jpg",
       "address": "Aswan, Egypt",
       "rating": "4.9",
       "working_hours": "10:00 AM - 6:00 PM",
@@ -301,7 +301,7 @@
     {
       "name": "Visit to Abu Simbel Temple",
       "description": "Discover the magnificent Abu Simbel Temple in Aswan.",
-      "image": "assets/images/tour_packages/d.jpg",
+      "image": "assets/images/tour_packages/a.jpg",
       "address": "Aswan, Egypt",
       "rating": "4.8",
       "working_hours": "7:00 AM - 5:00 PM",
@@ -310,7 +310,7 @@
     {
       "name": "Luxor City Tour",
       "description": "Enjoy a tour in the historic city of Luxor.",
-      "image": "assets/images/tour_packages/c.jpg",
+      "image": "assets/images/tour_packages/a.jpg",
       "address": "Luxor, Egypt",
       "rating": "4.7",
       "working_hours": "9:00 AM - 5:00 PM",
@@ -319,7 +319,7 @@
     {
       "name": "Visit to Hatshepsut Temple",
       "description": "Discover the magnificent Hatshepsut Temple in Luxor.",
-      "image": "assets/images/egyptian_cities/111.jpg",
+      "image": "assets/images/tour_packages/a.jpg",
       "address": "Luxor, Egypt",
       "rating": "4.6",
       "working_hours": "8:00 AM - 4:00 PM",
