@@ -1,0 +1,342 @@
+{
+  "egyptian_landmarks": [
+    {
+      "name": "Pyramids of Giza",
+      "description": "The iconic pyramids, including the Great Pyramid of Khufu, are ancient monuments located on the Giza Plateau.",
+      "image": "assets/images/egyptian_landmarks/1.jpg",
+      "address": "Giza, Egypt",
+      "rating": "4.8",
+      "working_hours": "7:00 AM - 5:00 PM",
+      "price": "Approximately $17.50"
+    },
+    {
+      "name": "Karnak Temple",
+      "description": "A vast complex of temples, chapels, and pylons dedicated to the Theban triad, located in Luxor.",
+      "image": "assets/images/egyptian_landmarks/2.jpg",
+      "address": "Luxor, Egypt",
+      "rating": "4.7",
+      "working_hours": "6:00 AM - 5:00 PM",
+      "price": "Approximately $2.50"
+    },
+    {
+      "name": "Egyptian Museum",
+      "description": "Home to an extensive collection of ancient Egyptian antiquities, including the treasures of Tutankhamun.",
+      "image": "assets/images/egyptian_landmarks/3.jpg",
+      "address": "Tahrir Square, Cairo, Egypt",
+      "rating": "4.6",
+      "working_hours": "9:00 AM - 8:00 PM",
+      "price": "Approximately $18.00"
+    },
+    {
+      "name": "Valley of the Kings",
+      "description": "A royal burial ground for pharaohs, featuring tombs adorned with intricate hieroglyphs.",
+      "image": "assets/images/egyptian_landmarks/4.jpg",
+      "address": "West Bank of the Nile, Luxor, Egypt",
+      "rating": "4.9",
+      "working_hours": "6:00 AM - 5:00 PM",
+      "price": "Approximately $10.00"
+    },
+    {
+      "name": "Abu Simbel Temples",
+      "description": "Massive rock temples built by Ramses II, known for their impressive facades and intricate interiors.",
+      "image": "assets/images/egyptian_landmarks/5.jpg",
+      "address": "Aswan Governorate, Egypt",
+      "rating": "4.8",
+      "working_hours": "5:00 AM - 6:00 PM",
+      "price": "Approximately $12.50"
+    },
+    {
+      "name": "Philae Temple",
+      "description": "An island temple complex dedicated to the goddess Isis, renowned for its beautiful architecture.",
+      "image": "assets/images/egyptian_landmarks/6.jpg",
+      "address": "Agilkia Island, Aswan, Egypt",
+      "rating": "4.7",
+      "working_hours": "7:00 AM - 4:00 PM",
+      "price": "Approximately $10.00"
+    },
+    {
+      "name": "Siwa Oasis",
+      "description": "A remote oasis known for its natural beauty, salt lakes, and the ancient Temple of the Oracle.",
+      "image": "assets/images/egyptian_landmarks/7.jpg",
+      "address": "Siwa, Matrouh Governorate, Egypt",
+      "rating": "4.9",
+      "working_hours": "Open 24 hours",
+      "price": "Free"
+    }
+  ],
+
+
+  "natural_places": [
+    {
+      "name": "Wadi El Rayan",
+      "description": "A protected area known for its beautiful waterfalls, lakes, and diverse wildlife.",
+      "image": "assets/images/natural_places/11.jpg",
+      "address": "Fayoum Governorate, Egypt",
+      "rating": "4.6",
+      "working_hours": "8:00 AM - 5:00 PM",
+      "price": "$3.00"
+    },
+    {
+      "name": "Mount Sinai",
+      "description": "A historic mountain in the Sinai Peninsula, significant for its religious importance and hiking trails.",
+      "image": "assets/images/natural_places/12.jpg",
+      "address": "South Sinai, Egypt",
+      "rating": "4.8",
+      "working_hours": "Open 24 hours",
+      "price": "Free"
+    },
+    {
+      "name": "Colored Canyon",
+      "description": "A narrow canyon with walls featuring colorful layers of rock, offering a unique hiking experience.",
+      "image": "assets/images/natural_places/13.jpg",
+      "address": "Nuweiba, South Sinai, Egypt",
+      "rating": "4.7",
+      "working_hours": "6:00 AM - 6:00 PM",
+      "price": "$5.00"
+    },
+    {
+      "name": "Nile River",
+      "description": "The longest river in the world, flowing through Egypt and providing lush landscapes along its banks.",
+      "image": "assets/images/natural_places/14.jpg",
+      "address": "Throughout Egypt",
+      "rating": "5.0",
+      "working_hours": "Open 24 hours",
+      "price": "Free"
+    },
+    {
+      "name": "The White Desert",
+      "description": "A desert area known for its white chalk rock formations, creating a surreal landscape.",
+      "image": "assets/images/natural_places/15.jpg",
+      "address": "Farafra, New Valley Governorate, Egypt",
+      "rating": "4.9",
+      "working_hours": "Open 24 hours",
+      "price": "$10.00"
+    },
+    {
+      "name": "The Black Desert",
+      "description": "A desert region characterized by volcanic hills and black stones, offering unique scenery.",
+      "image": "assets/images/natural_places/16.jpg",
+      "address": "Bahariya Oasis, Giza Governorate, Egypt",
+      "rating": "4.5",
+      "working_hours": "Open 24 hours",
+      "price": "$5.00"
+    },
+    {
+      "name": "Lake Nasser",
+      "description": "A vast reservoir in southern Egypt, known for fishing, boating, and its surrounding natural beauty.",
+      "image": "assets/images/natural_places/17.jpg",
+      "address": "Aswan Governorate, Egypt",
+      "rating": "4.7",
+      "working_hours": "Open 24 hours",
+      "price": "Free"
+    }
+  ],
+
+
+
+
+  "egyptian_cities": [
+    {
+      "name": "Cairo",
+      "description": "The capital city of Egypt, known for its rich history and landmarks such as the Pyramids of Giza and the Egyptian Museum.",
+      "image": "assets/images/egyptian_cities/111.jpg",
+      "address": "Cairo Governorate, Egypt",
+      "rating": "4.7",
+      "working_hours": "N/A",
+      "price": "Free"
+    },
+    {
+      "name": "Alexandria",
+      "description": "A Mediterranean port city founded by Alexander the Great, famous for its Greco-Roman landmarks and the modern Bibliotheca Alexandrina.",
+      "image": "assets/images/egyptian_cities/112.jpg",
+      "address": "Alexandria Governorate, Egypt",
+      "rating": "4.6",
+      "working_hours": "N/A",
+      "price": "Free"
+    },
+    {
+      "name": "Giza",
+      "description": "Home to the iconic Giza Plateau, featuring the Great Pyramids and the Sphinx.",
+      "image": "assets/images/egyptian_cities/113.jpg",
+      "address": "Giza Governorate, Egypt",
+      "rating": "4.8",
+      "working_hours": "N/A",
+      "price": "Free"
+    },
+    {
+      "name": "Luxor",
+      "description": "Often referred to as the world's greatest open-air museum, Luxor is known for the Valley of the Kings and Karnak Temple.",
+      "image": "assets/images/egyptian_cities/114.jpg",
+      "address": "Luxor Governorate, Egypt",
+      "rating": "4.9",
+      "working_hours": "N/A",
+      "price": "Free"
+    },
+    {
+      "name": "Aswan",
+      "description": "A city on the Nile River, known for its beautiful scenery, the Aswan High Dam, and Philae Temple.",
+      "image": "assets/images/egyptian_cities/115.jpg",
+      "address": "Aswan Governorate, Egypt",
+      "rating": "4.7",
+      "working_hours": "N/A",
+      "price": "Free"
+    },
+    {
+      "name": "Sharm El Sheikh",
+      "description": "A resort town between the desert of the Sinai Peninsula and the Red Sea, known for its beaches and coral reefs.",
+      "image": "assets/images/egyptian_cities/116.jpg",
+      "address": "South Sinai Governorate, Egypt",
+      "rating": "4.5",
+      "working_hours": "N/A",
+      "price": "Free"
+    },
+    {
+      "name": "Hurghada",
+      "description": "A beach resort town stretching some 40km along Egypt’s Red Sea coast, known for scuba diving.",
+      "image": "assets/images/egyptian_cities/117.jpg",
+      "address": "Red Sea Governorate, Egypt",
+      "rating": "4.4",
+      "working_hours": "N/A",
+      "price": "Free"
+    }
+  ],
+
+
+
+  "egyptian_hills": [
+    {
+      "name": "Tell el-Fara'in (Buto)",
+      "description": "An archaeological site in Kafr El Sheikh Governorate, believed to have been a religious and commercial center in ancient times.",
+      "image": "assets/images/egyptian_hills/1111.jpg",
+      "address": "Kafr El Sheikh Governorate, Egypt",
+      "rating": "4.5",
+      "working_hours": "8:00 AM - 5:00 PM",
+      "price": "$5.00"
+    },
+    {
+      "name": "Tell Kom El-Hegena",
+      "description": "An archaeological site in Dakahlia Governorate, believed to have been an urban center in ancient times.",
+      "image": "assets/images/egyptian_hills/1112.jpg",
+      "address": "Dakahlia Governorate, Egypt",
+      "rating": "4.2",
+      "working_hours": "8:00 AM - 5:00 PM",
+      "price": "$4.00"
+    },
+    {
+      "name": "Tell Kabrit",
+      "description": "An archaeological site in Dakahlia Governorate, containing remains of ancient settlements.",
+      "image": "assets/images/egyptian_hills/1113.jpg",
+      "address": "Dakahlia Governorate, Egypt",
+      "rating": "4.3",
+      "working_hours": "8:00 AM - 5:00 PM",
+      "price": "$4.50"
+    },
+    {
+      "name": "Tell El-Khanzir",
+      "description": "An archaeological site in Dakahlia Governorate, believed to have been a religious and commercial center in ancient times.",
+      "image": "assets/images/egyptian_hills/1114.jpg",
+      "address": "Dakahlia Governorate, Egypt",
+      "rating": "4.1",
+      "working_hours": "8:00 AM - 5:00 PM",
+      "price": "$3.50"
+    },
+    {
+      "name": "Tell Sidi Salem",
+      "description": "An archaeological site in Kafr El Sheikh Governorate, containing remains of ancient settlements.",
+      "image": "assets/images/egyptian_hills/1115.jpg",
+      "address": "Kafr El Sheikh Governorate, Egypt",
+      "rating": "4.4",
+      "working_hours": "8:00 AM - 5:00 PM",
+      "price": "$4.00"
+    },
+    {
+      "name": "Tell El-Galala",
+      "description": "An archaeological site in Dakahlia Governorate, believed to have been an urban center in ancient times.",
+      "image": "assets/images/egyptian_hills/1116.jpg",
+      "address": "Dakahlia Governorate, Egypt",
+      "rating": "4.2",
+      "working_hours": "8:00 AM - 5:00 PM",
+      "price": "$4.50"
+    },
+    {
+      "name": "Tell Senghar",
+      "description": "An archaeological site in Dakahlia Governorate, containing remains of ancient settlements.",
+      "image": "assets/images/egyptian_hills/1117.jpg",
+      "address": "Dakahlia Governorate, Egypt",
+      "rating": "4.3",
+      "working_hours": "8:00 AM - 5:00 PM",
+      "price": "$4.00"
+    }
+  ]
+
+,
+  "tour_packages": [
+    {
+      "name": "Trip to the Pyramids",
+      "description": "Enjoy a tour to the Giza Pyramids, one of the Seven Wonders of the World.",
+      "image": "assets/images/egyptian_hills/1117.jpg",
+      "address": "Giza, Egypt",
+      "rating": "4.8",
+      "working_hours": "9:00 AM - 5:00 PM",
+      "price": "$50.00"
+    },
+    {
+      "name": "Karnak Temple Tour",
+      "description": "Discover the rich history of Karnak Temple in Luxor.",
+      "image": "assets/images/tour_packages/f.jpg",
+      "address": "Luxor, Egypt",
+      "rating": "4.7",
+      "working_hours": "8:00 AM - 4:00 PM",
+      "price": "$40.00"
+    },
+    {
+      "name": "Nile River Cruise",
+      "description": "Enjoy a special cruise on the Nile River.",
+      "image": "assets/images/tour_packages/e.jpg",
+      "address": "Aswan, Egypt",
+      "rating": "4.9",
+      "working_hours": "10:00 AM - 6:00 PM",
+      "price": "$100.00"
+    },
+    {
+      "name": "Visit to Abu Simbel Temple",
+      "description": "Discover the magnificent Abu Simbel Temple in Aswan.",
+      "image": "assets/images/tour_packages/d.jpg",
+      "address": "Aswan, Egypt",
+      "rating": "4.8",
+      "working_hours": "7:00 AM - 5:00 PM",
+      "price": "$60.00"
+    },
+    {
+      "name": "Luxor City Tour",
+      "description": "Enjoy a tour in the historic city of Luxor.",
+      "image": "assets/images/tour_packages/c.jpg",
+      "address": "Luxor, Egypt",
+      "rating": "4.7",
+      "working_hours": "9:00 AM - 5:00 PM",
+      "price": "$30.00"
+    },
+    {
+      "name": "Visit to Hatshepsut Temple",
+      "description": "Discover the magnificent Hatshepsut Temple in Luxor.",
+      "image": "assets/images/egyptian_cities/111.jpg",
+      "address": "Luxor, Egypt",
+      "rating": "4.6",
+      "working_hours": "8:00 AM - 4:00 PM",
+      "price": "$35.00"
+    },
+    {
+      "name": "Valley of the Kings Tour",
+      "description": "Enjoy a tour in the famous Valley of the Kings in Luxor.",
+      "image": "assets/images/tour_packages/a.jpg",
+      "address": "Luxor, Egypt",
+      "rating": "4.8",
+      "working_hours": "7:00 AM - 5:00 PM",
+      "price": "$45.00"
+    }
+  ]
+}
+
+
+
+
