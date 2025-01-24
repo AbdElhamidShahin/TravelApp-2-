@@ -112,7 +112,7 @@ class Registerscreen extends StatelessWidget {
                           onTap: () async {
                             if (formKey.currentState!.validate()) {
                               try {
-                                final credential = await FirebaseAuth.instance
+                                 FirebaseAuth.instance
                                     .signInWithEmailAndPassword(
                                   email: email!,
                                   password: password!,

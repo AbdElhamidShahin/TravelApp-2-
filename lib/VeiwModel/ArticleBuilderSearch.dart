@@ -80,7 +80,7 @@ class ArticleBuilderSearch extends StatelessWidget {
                       children: [
                         const Icon(Icons.location_on_outlined),
                         Text(
-                          travel[index].address ?? 'Unknown',
+                          travel[index].address ,
                           style:
                           const TextStyle(color: Colors.grey, fontSize: 16),
                         ),

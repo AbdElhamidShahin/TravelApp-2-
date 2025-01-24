@@ -6,7 +6,6 @@ import '../Wedget/CustomItemScreen.dart';
 class Favorite extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    bool isFavorite = false; // لتتبع حالة الأيقونة
 
     return Consumer<ItemProvider>(
       builder: (context, itemProvider, child) {
@@ -45,7 +44,7 @@ class Favorite extends StatelessWidget {
                                   if (travel != null) {
                                     Provider.of<ItemProvider>(context,
                                             listen: false)
-                                        .removeItem(travel!);
+                                        .removeItem(travel);
                                   }
                                 },
                               ),
