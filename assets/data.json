@@ -1,4 +1,6 @@
 {
+  "categories": {
+
   "egyptian_landmarks": [
     {
       "name": "Pyramids of Giza",
@@ -339,4 +341,7 @@
 
 
 
+
+
+}
 

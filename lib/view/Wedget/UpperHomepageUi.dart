@@ -86,7 +86,7 @@ class Upperhomepageui extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Search()),
+                MaterialPageRoute(builder: (context) => SearchScreen()),
               );
             },
           ),

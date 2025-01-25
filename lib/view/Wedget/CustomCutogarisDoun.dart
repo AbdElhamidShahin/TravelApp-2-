@@ -14,7 +14,7 @@ class Customcutogarisdoun extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 10, left: 10, bottom: 8, top: 0),
       child: GestureDetector(
-        child: Customitemscreen(
+        child: CustomItemScreen(
           travel: travel,
           onTap1: () {
             if (travel != null) {
@@ -51,7 +51,6 @@ class Customcutogarisdoun extends StatelessWidget {
                       ),
                     );
 
-                    // خلفية متحركة بألوان حيادية
                     return Stack(
                       children: [
                         Positioned.fill(

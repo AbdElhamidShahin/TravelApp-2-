@@ -81,6 +81,14 @@ flutter:
     - assets/images/egyptian_landmarks/
     - assets/images/natural_places/
     - assets/images/tour_packages/
+    - assets/travel/Tourism/malecostume-512.webp
+    - assets/images/star.jpg
+    - assets/images/star.png
+    - assets/images/ImagesTabBar/
+    - assets/travel/Tourism/
+    - assets/data.json
+
+
     - assets/Travel.json
 
 

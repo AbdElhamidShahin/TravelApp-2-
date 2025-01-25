@@ -39,59 +39,6 @@ class TravelCubit extends Cubit<TravelState> {
     emit(TravelBottomnavBarState());
   }
 
-  List<Travel> naturalPlaces = [];
-  List<Travel> searchResults = [];
-
-  Future<void> loadData() async {
-    try {
-      String jsonString =
-          await rootBundle.loadString('assets/Travel.json');
-      Map<String, dynamic> jsonResponse = jsonDecode(jsonString);
-
-      if (jsonResponse.containsKey('egyptian_landmarks')) {
-        List<dynamic> placesJson = jsonResponse['egyptian_landmarks'];
-        naturalPlaces =
-            placesJson.map((data) => Travel.fromJson(data)).toList();
-        emit(TravelInitialState());
-      } else {
-        throw Exception('Key "natural_places" not found in JSON');
-      }
-    } catch (e) {
-      print('Error loading JSON data: $e');
-      emit(TravelErrorState(error: 'Error loading data'));
-    }
-  }
-  void getSearch(String value) {
-    emit(TravelGetSearchLodingState());
-
-    if (value.trim().isEmpty) {
-      searchResults = [];
-      emit(TravelGetSearchEmptyState());
-      return;
-    }
-
-    try {
-      searchResults = naturalPlaces.where((place) {
-        if (place.name == null) return false; // تجاهل العناصر غير الصالحة
-        final name = place.name.toLowerCase();
-        final searchValue = value.toLowerCase();
-
-        print('Searching for: $searchValue in $name');
-        return name.contains(searchValue);
-      }).toList();
-
-      if (searchResults.isEmpty) {
-        print('No matches found for: $value');
-        emit(TravelGetSearchEmptyState());
-      } else {
-        emit(TravelGetSearchSuccessState());
-      }
-    } catch (error) {
-      print('Error during search: $error');
-      emit(TravelGetDataErrorState(error.toString()));
-    }
-  }
-
   bool isDark = false;
 
   void changeAppMode() {
@@ -99,5 +46,4 @@ class TravelCubit extends Cubit<TravelState> {
     print("Mode changed: $isDark");
     emit(AppChangeModeState(isDark));
   }
-
 }

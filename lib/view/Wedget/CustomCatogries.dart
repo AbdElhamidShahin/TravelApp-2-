@@ -107,6 +107,7 @@ class CustomCategories extends StatelessWidget {
                       child: Image(
                         image: AssetImage(
                           travel!.image,
+
                         ),
                       ),
                     ),
@@ -134,7 +135,7 @@ class CustomCategories extends StatelessWidget {
                     ),
                     const Spacer(),
                     const Image(
-                      image: AssetImage('assets/imagesFood/star.png'),
+                      image: AssetImage('assets/images/star.png'),
                       height: 25,
                       width: 25,
                     ),

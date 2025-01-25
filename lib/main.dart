@@ -1,11 +1,12 @@
-import 'package:Tourism_app/firebase_options.dart';
 import 'package:Tourism_app/model/cubit/states.dart';
+import 'package:Tourism_app/view/Login/LoginScreen.dart';
 import 'package:Tourism_app/view/screens/HomePage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 
+import 'firebase_options.dart';
 import 'model/cubit/bloc.dart';
 import 'model/itemProvider.dart';
 
@@ -19,7 +20,7 @@ void main() async {
     MultiBlocProvider(
       providers: [
         BlocProvider<TravelCubit>(
-          create: (context) => TravelCubit()..loadData(),
+          create: (context) => TravelCubit(),
         ),
       ],
       child: ChangeNotifierProvider(

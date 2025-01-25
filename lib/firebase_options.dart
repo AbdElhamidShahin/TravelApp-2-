@@ -85,4 +85,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'toursm-app.firebasestorage.app',
     measurementId: 'G-X4JY0W6RQ9',
   );
+
 }

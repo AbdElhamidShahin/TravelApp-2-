@@ -3,32 +3,41 @@ import 'package:flutter/material.dart';
 
 import '../../model/articalmodel.dart';
 
-class Customitemscreen extends StatefulWidget {
-  const Customitemscreen({
+class CustomItemScreen extends StatefulWidget {
+  const CustomItemScreen({
     super.key,
     this.travel,
     this.onTap,
     this.onTap1,
   });
+
   final Travel? travel;
   final VoidCallback? onTap;
   final VoidCallback? onTap1;
 
   @override
-  State<Customitemscreen> createState() => _CustomitemscreenState();
+  State<CustomItemScreen> createState() => _CustomItemScreenState();
 }
 
-class _CustomitemscreenState extends State<Customitemscreen> {
+class _CustomItemScreenState extends State<CustomItemScreen> {
   bool isFavorite = false;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: widget.onTap1, // استخدم widget.onTap هنا
+      onTap: widget.onTap1,
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.3),
+              spreadRadius: 2,
+              blurRadius: 5,
+              offset: const Offset(0, 3),
+            ),
+          ],
         ),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -36,17 +45,21 @@ class _CustomitemscreenState extends State<Customitemscreen> {
             children: [
               Stack(
                 children: [
-                  ClipRRect(
+                  // Check if travel object is null before accessing image
+                  widget.travel?.image != null
+                      ? ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image(
-                      image: AssetImage(
-                        widget.travel!.image,
-                      ),
+                      image: AssetImage(widget.travel!.image),
                       width: MediaQuery.of(context).size.width * 0.42,
+                      height: 150,
+                      fit: BoxFit.cover,
                     ),
-                  ),
-                  Align(
-                    alignment: Alignment.topRight,
+                  )
+                      : const SizedBox.shrink(), // Handle null image
+                  Positioned(
+                    top: 8,
+                    right: 8,
                     child: InkWell(
                       onTap: () {
                         setState(() {
@@ -56,71 +69,71 @@ class _CustomitemscreenState extends State<Customitemscreen> {
                           widget.onTap!();
                         }
                       },
-                      child: Container(
-                        padding: EdgeInsets.all(12),
-                        child: Icon(
-                          Icons.favorite_outlined,
-                          size: 30,
-                          color: isFavorite ? Colors.red : Colors.transparent,
-                          shadows: [
-                            const BoxShadow(
-                              color: Colors.white,
-                              blurRadius: 1.0,
-                              spreadRadius: 1.0,
-                            ),
-                          ],
-                        ),
+                      child: Icon(
+                        Icons.favorite,
+                        size: 24,
+                        color: isFavorite ? Colors.red : Colors.white,
                       ),
                     ),
                   ),
                 ],
               ),
               Padding(
-                padding: EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(16.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    AutoSizeText(
-                      widget.travel?.name ?? 'No Name',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 22, // الحجم الأساسي للنص
-                        fontWeight: FontWeight.w500,
-                      ),
-                      maxLines: 1, // النص سيكون في سطر واحد فقط
-                      minFontSize: 12, // الحجم الأدنى للنص عند الحاجة
-                      stepGranularity: 3, // تغيير الحجم بشكل تدريجي
-                    ),
-                    SizedBox(height: 8),
                     Row(
                       children: [
-                        Text(
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: AutoSizeText(
+                            widget.travel?.name ?? 'Unknown',
+                            style: const TextStyle(
+                              color: Colors.black,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                            ),
+                            maxLines: 1,
+                            minFontSize: 12,
+                            stepGranularity: 1,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 8),
+                    Row(
+                      children: [
+                        const Text(
                           "Starting from ",
                           style: TextStyle(color: Colors.grey, fontSize: 12),
                         ),
                         Text(
-                          "${widget.travel!.price}\$",
-                          style: TextStyle(color: Colors.black, fontSize: 14),
+                          widget.travel?.price != null
+                              ? "${widget.travel!.price}\$"
+                              : "N/A",
+                          style: const TextStyle(color: Colors.black, fontSize: 14),
                         ),
                       ],
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 12),
                     Row(
                       children: [
-                        Icon(Icons.location_on_outlined),
-                        Text(
+                        const Icon(Icons.location_on_outlined),
+                        const Text(
                           'Egypt',
                           style: TextStyle(color: Colors.grey, fontSize: 16),
                         ),
-                        SizedBox(width: 30),
-                        Image(
-                          image: AssetImage('assets/imagesFood/star.png'),
+                        const SizedBox(width: 30),
+                        Image.asset(
+                          'assets/images/star.png',
                           height: 24,
                           width: 24,
                         ),
                         Text(
-                          widget.travel!.rating,
-                          style: TextStyle(color: Colors.black, fontSize: 16),
+                          widget.travel?.rating ?? '0',
+                          style: const TextStyle(color: Colors.black, fontSize: 16),
                         ),
                       ],
                     ),

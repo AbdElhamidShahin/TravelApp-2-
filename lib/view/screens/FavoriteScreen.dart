@@ -38,7 +38,7 @@ class Favorite extends StatelessWidget {
                           ),
                           child: Column(
                             children: [
-                              Customitemscreen(
+                              CustomItemScreen(
                                 travel: travel,
                                 onTap: () {
                                   if (travel != null) {

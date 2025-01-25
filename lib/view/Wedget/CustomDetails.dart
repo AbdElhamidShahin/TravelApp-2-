@@ -193,7 +193,7 @@ class CustomDetails extends StatelessWidget {
                     ),
                     const Spacer(),
                     const Image(
-                      image: AssetImage('assets/imagesFood/star.png'),
+                      image: AssetImage('assets/images/star.png'),
                       height: 35,
                       width: 35,
                     ),

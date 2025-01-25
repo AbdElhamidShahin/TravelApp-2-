@@ -78,10 +78,10 @@ class CustomTabBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start, // محاذاة الأيقونات أفقيًا
           children: [
-            _buildTabItem(0, 'assets/travel/Images/Desert.png', 'Desert '),
-            _buildTabItem(1, 'assets/travel/Images/download.jpeg', 'Landscapes '),
-            _buildTabItem(2, 'assets/travel/Images/Lake.jpeg', 'Hills  '),
-            _buildTabItem(3, 'assets/travel/Images/220163.png', 'City  '),
+            _buildTabItem(0, 'assets/images/ImagesTabBar/Desert.jpg', 'Desert '),
+            _buildTabItem(1, 'assets/images/ImagesTabBar/Landscapes.jpg', 'Landscapes '),
+            _buildTabItem(2, 'assets/images/ImagesTabBar/Hills.jpg', 'Hills  '),
+            _buildTabItem(3, 'assets/images/ImagesTabBar/City.jpg', 'City  '),
           ],
         ),
       ),

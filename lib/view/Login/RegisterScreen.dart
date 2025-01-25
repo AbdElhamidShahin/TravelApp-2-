@@ -27,7 +27,7 @@ class Registerscreen extends StatelessWidget {
                   BlendMode.darken,
                 ),
                 child: Image.asset(
-                  'assets/travel/Images/gettyimages-95062687-612x612.jpg',
+                  'assets/travel/Tourism/backGround.jpg',
                   fit: BoxFit.cover,
                 ),
               ),
