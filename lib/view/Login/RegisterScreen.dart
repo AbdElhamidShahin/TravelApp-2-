@@ -3,6 +3,7 @@ import 'package:Tourism_app/view/screens/HomePage.dart';
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import '../../VeiwModel/helper/showCustomSnackbar.dart';
 import '../Wedget/CustomTextFeild.dart';
 import '../Wedget/Custom_button.dart';
 
@@ -112,10 +113,14 @@ class Registerscreen extends StatelessWidget {
                           onTap: () async {
                             if (formKey.currentState!.validate()) {
                               try {
-                                 FirebaseAuth.instance
-                                    .signInWithEmailAndPassword(
-                                  email: email!,
-                                  password: password!,
+                                UserCredential user = await FirebaseAuth
+                                    .instance
+                                    .createUserWithEmailAndPassword(
+                                        email: email!, password: password!);
+
+                                Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => HomePage()), // تغيير HomePage إلى الصفحة الرئيسية الفعلية في تطبيقك
                                 );
 
                                 showCustomSnackbar(
@@ -184,76 +189,6 @@ class Registerscreen extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-
-  void showCustomSnackbar(BuildContext context, ContentType messageType,
-      String title, String message) {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return Stack(
-          children: [
-            AnimatedPositioned(
-              duration: Duration(milliseconds: 500),
-              curve: Curves.easeInOut,
-              top: 50.0, // المسافة من أعلى الشاشة
-              left: 20.0,
-              right: 20.0,
-              child: Material(
-                color: Colors.transparent,
-                child: Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0),
-                  decoration: BoxDecoration(
-                    color: messageType == ContentType.success
-                        ? Colors.green
-                        : Colors.red,
-                    borderRadius: BorderRadius.circular(15),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.3),
-                        spreadRadius: 3,
-                        blurRadius: 5,
-                      ),
-                    ],
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(
-                        messageType == ContentType.success
-                            ? Icons.check
-                            : Icons.error,
-                        color: Colors.white,
-                        size: 24,
-                      ),
-                      SizedBox(width: 10),
-                      Expanded(
-                        child: Text(
-                          message,
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600),
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                      IconButton(
-                        icon: Icon(Icons.close, color: Colors.white),
-                        onPressed: () {
-                          Navigator.pop(
-                              context); // إغلاق الرسالة عند الضغط على زر الإغلاق
-                        },
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ],
-        );
-      },
     );
   }
 }

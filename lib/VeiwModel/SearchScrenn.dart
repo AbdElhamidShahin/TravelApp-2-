@@ -149,7 +149,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                 ],
                               );
                             },
-                            transitionDuration: const Duration(milliseconds: 200),
+                            transitionDuration: const Duration(milliseconds: 1800),
                           ),
                         );
                       }

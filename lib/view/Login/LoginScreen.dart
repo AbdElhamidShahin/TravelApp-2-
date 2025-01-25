@@ -1,7 +1,9 @@
 import 'package:Tourism_app/view/Login/RegisterScreen.dart';
+import 'package:Tourism_app/view/screens/HomePage.dart';
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import '../../VeiwModel/helper/showCustomSnackbar.dart';
 import '../Wedget/CustomTextFeild.dart';
 import '../Wedget/Custom_button.dart';
 
@@ -92,47 +94,49 @@ class Loginscreen extends StatelessWidget {
                         width: 300,
                         height: 55,
                         child: CustomButton(
-                          text: 'Login',
+                          text: 'Login ',
                           onTap: () async {
                             if (formKey.currentState!.validate()) {
                               try {
-                                final credential = await FirebaseAuth.instance
-                                    .signInWithEmailAndPassword(
-                                  email: email!,
-                                  password: password!,
+                                UserCredential user = await FirebaseAuth
+                                    .instance
+                                    .createUserWithEmailAndPassword(
+                                        email: email!, password: password!);
+
+                                Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          HomePage()), // تغيير HomePage إلى الصفحة الرئيسية الفعلية في تطبيقك
                                 );
-                                // Proceed after successful login
+
+                                showCustomSnackbar(
+                                    context,
+                                    ContentType.success,
+                                    'Registration successful',
+                                    'Redirecting now');
+
+                                await Future.delayed(Duration(seconds: 2));
+
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Loginscreen(),
+                                  ),
+                                );
                               } on FirebaseAuthException catch (e) {
-                                if (e.code == 'user-not-found') {
+                                if (e.code == 'weak-password') {
                                   showCustomSnackbar(
                                       context,
                                       ContentType.failure,
                                       'Error',
-                                      'No user found for that email.');
-                                } else if (e.code == 'wrong-password') {
+                                      'Weak password');
+                                } else if (e.code == 'email-already-in-use') {
                                   showCustomSnackbar(
                                       context,
                                       ContentType.failure,
                                       'Error',
-                                      'Wrong password provided.');
-                                } else if (e.code == 'network-request-failed') {
-                                  showCustomSnackbar(
-                                      context,
-                                      ContentType.failure,
-                                      'Error',
-                                      'Network error occurred.');
-                                } else if (e.code == 'too-many-requests') {
-                                  showCustomSnackbar(
-                                      context,
-                                      ContentType.failure,
-                                      'Error',
-                                      'Too many requests. Please try again later.');
-                                } else {
-                                  showCustomSnackbar(
-                                      context,
-                                      ContentType.failure,
-                                      'Error',
-                                      e.message ?? 'An unknown error occurred');
+                                      'Email already in use');
                                 }
                               } catch (e) {
                                 print(e);
@@ -174,36 +178,5 @@ class Loginscreen extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  void showCustomSnackbar(BuildContext context, ContentType messageType,
-      String title, String message) {
-    final snackBar = SnackBar(
-      content: Row(
-        children: [
-          Icon(
-            messageType == ContentType.success ? Icons.check : Icons.error,
-            color: Colors.white,
-          ),
-          SizedBox(width: 10),
-          Expanded(
-            child: Text(
-              message,
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ],
-      ),
-      backgroundColor:
-          messageType == ContentType.success ? Colors.green : Colors.red,
-      behavior: SnackBarBehavior.floating,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15),
-      ),
-    );
-
-    ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
 }

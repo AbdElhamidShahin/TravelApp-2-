@@ -42,10 +42,10 @@ class _CustomtabbarState extends State<Customtabbar> {
           ),
         ),
         SizedBox(
-          height: 255, // Adjust height to control the size of TabBarView
+          height: 255,
           child: IndexedStack(
             index:
-                selectedIndex, // استخدام IndexedStack لعرض التبويبات بناءً على الاختيار
+                selectedIndex,
             children: const [
               PushItemData(category: 'egyptian_landmarks'),
               PushItemData(category: 'natural_places'),

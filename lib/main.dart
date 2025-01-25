@@ -158,7 +158,7 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ),
             themeMode: TravelCubit.get(context).isDark ? ThemeMode.light : ThemeMode.dark,
-            home: HomePage(),
+            home: Loginscreen(),
           );
         },
         listener: (context, state) {},
