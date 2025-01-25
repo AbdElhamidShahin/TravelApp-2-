@@ -98,48 +98,43 @@ class Loginscreen extends StatelessWidget {
                           onTap: () async {
                             if (formKey.currentState!.validate()) {
                               try {
-                                UserCredential user = await FirebaseAuth
-                                    .instance
-                                    .createUserWithEmailAndPassword(
-                                        email: email!, password: password!);
+                                UserCredential user = await FirebaseAuth.instance
+                                    .signInWithEmailAndPassword(
+                                    email: email!, password: password!);
 
                                 Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) =>
-                                          HomePage()), // تغيير HomePage إلى الصفحة الرئيسية الفعلية في تطبيقك
+                                      builder: (context) => HomePage()), // الانتقال إلى الصفحة الرئيسية
                                 );
 
                                 showCustomSnackbar(
-                                    context,
-                                    ContentType.success,
-                                    'Registration successful',
-                                    'Redirecting now');
-
-                                await Future.delayed(Duration(seconds: 2));
-
-                                Navigator.push(
                                   context,
-                                  MaterialPageRoute(
-                                    builder: (context) => Loginscreen(),
-                                  ),
+                                  ContentType.success,
+                                  'Login successful',
+                                  'Redirecting to HomePage',
                                 );
+
                               } on FirebaseAuthException catch (e) {
-                                if (e.code == 'weak-password') {
+                             if (e.code == 'wrong-password') {
+                                  // في حال كانت كلمة المرور خاطئة
                                   showCustomSnackbar(
                                       context,
                                       ContentType.failure,
                                       'Error',
-                                      'Weak password');
-                                } else if (e.code == 'email-already-in-use') {
+                                      'wrong password');
+                                } else {
+                                  // معالجة باقي الأخطاء
                                   showCustomSnackbar(
                                       context,
-                                      ContentType.failure,
+                                      ContentType.warning,
                                       'Error',
-                                      'Email already in use');
+                                      'No account? Sign up now');
                                 }
-                              } catch (e) {
-                                print(e);
+                              } catch (ex) {
+                                print(ex);
+                                showCustomSnackbar(
+                                    context, ContentType.failure, 'خطأ', 'حدث خطأ ما');
                               }
                             }
                           },
