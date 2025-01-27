@@ -41,9 +41,17 @@ class TravelCubit extends Cubit<TravelState> {
 
   bool isDark = false;
 
-  void changeAppMode() {
-    isDark = !isDark;
-    print("Mode changed: $isDark");
-    emit(AppChangeModeState(isDark));
+  void toggleTheme() {
+    print("Toggle theme called"); // للتأكد من استدعاء الدالة
+    if (state is ThemeState) {
+      final currentTheme = (state as ThemeState).themeMode;
+      final newTheme = currentTheme == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
+      print("Changing theme to: $newTheme"); // لتتبع التبديل
+      emit(ThemeState(newTheme)); // إطلاق الحالة الجديدة
+    }
   }
-}
+
+  }
+
+
+

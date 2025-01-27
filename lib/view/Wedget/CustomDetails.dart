@@ -219,19 +219,25 @@ class CustomDetails extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 ElevatedButton(
+
                   style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black,
                     shape: RoundedRectangleBorder(
+
                       borderRadius: BorderRadius.circular(12),
                     ),
+
                     padding: const EdgeInsets.symmetric(vertical: 16),
                   ),
                   onPressed: () {
                     Navigator.pop(context);
                   },
                   child: const Center(
+
                     child: Text(
                       "Book now",
                       style: TextStyle(
+                        color: Colors.white,
                         fontSize: 22,
                       ),
                     ),

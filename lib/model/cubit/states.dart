@@ -1,4 +1,8 @@
-abstract class TravelState {}
+import 'package:flutter/material.dart';
+
+abstract class TravelState {
+
+}
 
 class TravelInitialState extends TravelState {}
 
@@ -29,8 +33,8 @@ class TravelErrorState extends TravelState {
   TravelErrorState({required this.error});
 }
 
-class AppChangeModeState extends TravelState {
-  final bool isDark;
+class ThemeState extends TravelState {
+  final ThemeMode themeMode;
 
-  AppChangeModeState(this.isDark);
+  ThemeState(this.themeMode);
 }

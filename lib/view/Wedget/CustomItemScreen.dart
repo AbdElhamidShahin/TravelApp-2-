@@ -91,7 +91,7 @@ class _CustomItemScreenState extends State<CustomItemScreen> {
                             widget.travel?.name ?? 'Unknown',
                             style: const TextStyle(
                               color: Colors.black,
-                              fontSize: 18,
+                              fontSize: 16,
                               fontWeight: FontWeight.w500,
                             ),
                             maxLines: 1,
